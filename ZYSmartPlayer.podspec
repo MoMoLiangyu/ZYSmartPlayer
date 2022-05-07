@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZYSmartPlayer"
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.3"
   spec.summary      = "ZYSmartPlayer player"
 
   # This description is used to generate tags and improve search results.
@@ -63,11 +63,11 @@ Pod::Spec.new do |spec|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-   spec.platform     = :ios
+  # spec.platform     = :ios
   # spec.platform     = :ios, "5.0"
 
   #  When using multiple platforms
-  # spec.ios.deployment_target = "5.0"
+   spec.ios.deployment_target = "9.0"
   # spec.osx.deployment_target = "10.7"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
@@ -90,11 +90,14 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
   
-  #spec.source_files  = "IJKMediaFramework.framework"
   spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  #spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
+  
+  #spec.subspec 'IJKMediaFramework' do |ijk|
+    #ijk.vendored_frameworks = 'Framework/ThirdPart/IJKMediaFramework.framework'
+  #end
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -107,7 +110,7 @@ Pod::Spec.new do |spec|
 
   # spec.resource  = "icon.png"
   # spec.resources = "Resources/*.png"
-
+  
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
 
